@@ -12,12 +12,21 @@ h2{
     font-family: 'Niconne', cursive;
 
 }
+hr{
+    margin-top: 0;
+    margin-bottom: 0;
+}
 p{
 
     font-size: 15px;
-    font-family: 'Passion One', cursive;
+    font-family: 'Aclonica', sans-serif;
 }
 .flag{
     height: 100px;
     margin-top: 0;
+}
+.webname{
+ margin-top: 40px;
+ margin-bottom: 0;
+ justify-content: baseline;
 }
