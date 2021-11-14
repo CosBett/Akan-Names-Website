@@ -26,7 +26,19 @@ p{
     margin-top: 0;
 }
 .appl{
-  
+    background-color: transparent 50%;
+    width: 100%;
+    border: 5px solid rgba(78, 17, 219, 0.336);
+    padding-left: 60px;
+    padding-top: 20px;
+    margin: 10px;
+
+}
+.inp{
+    width: 40px;
+}
+.inp1{
+    width: 80px;
 }
 .webname{
  margin-top: 40px;
