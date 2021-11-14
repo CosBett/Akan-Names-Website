@@ -36,15 +36,72 @@ const year = document.querySelector("#year").innerHTML
   }
   document.getElementById("month").addEventListener("change", validateMonth)
 
-   function akanName(){
+   function dayOfTheWeek(){
        let year = document.getElementById("year").value
        let yr = String(year).split("")
             .map((year)=>{
                 return Number(year)
             })
        let CC = yr.slice(0,2).join("")
-       let YY = yr.slice(2)
-       let MM= document.getElementById("month")
-       let DD =document.getElementById("day")
-       const d =( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7
+       let YY = yr.slice(2).join("")
+       let MM= document.getElementById("month").value
+       let DD = document.getElementById("day").value
+
+       console.log('YY', YY, 'ÇC', CC, MM, DD)
+  
+        return ( (( parseInt(CC/4) - parseInt(2*CC-1)) + (parseInt(5*YY/4) ) + (parseInt((parseInt(26*(MM+1)))/10)) + DD ) + 1) % 7
    }
+document.getElementById("subm").addEventListener("click",akanNames)
+function akanNames(){
+  let gender = document.querySelector('input[name="gender"]:checked').value
+  let day = dayOfTheWeek()
+  let message = document.getElementById("feedback")
+  message.innerHTML = ""
+  if(gender == 'Female'){
+    if(day == 0){
+      message.innerHTML = "Your Akan name is Akosua"
+    } 
+    else if(day == 1){
+      message.innerHTML = "Your Akan name is Adwoa"
+    }
+    else if(day == 2){
+      message.innerHTML = "Your Akan name is Abenaa"
+    }
+    else if(day == 3){
+      message.innerHTML = "Your Akan name is Akua"
+    }
+    else if(day == 4){
+      message.innerHTML = "Your Akan name is Yaa"
+    }
+    else if(day == 5){
+      message.innerHTML = "Your Akan name is Afua"
+    }
+    else if(day == 6){
+      message.innerHTML = "Your Akan name is Ama"
+    }
+  else (gender == 'Male'){
+    if(day == 0){
+      message.innerHTML = "Your Akan name is Kwasi"
+    } 
+    else if(day == 1){
+      message.innerHTML = "Your Akan name is Kwadwo"
+    }
+    else if(day == 2){
+      message.innerHTML = "Your Akan name is Kwabena"
+    }
+    else if(day == 3){
+      message.innerHTML = "Your Akan name is Kwaku"
+    }
+    else if(day == 4){
+      message.innerHTML = "Your Akan name is Yaw"
+    }
+    else if(day == 5){
+      message.innerHTML = "Your Akan name is Kofi"
+    }
+    else if(day == 6){
+      message.innerHTML = "Your Akan name is Kwame"
+    }
+  } 
+  console.log(gender, day)
+}
+}
