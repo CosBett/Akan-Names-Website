@@ -1,6 +1,6 @@
-const day = document.querySelector("#day").innerHTML
-const month = document.querySelector("#month").innerHTML
-const year = document.querySelector("#year").innerHTML
+const day = document.querySelector("#day").value
+const month = document.querySelector("#month").value
+const year = document.querySelector("#year").value
 
   function validateDay() {
     const message = document.getElementById("errD");
@@ -49,14 +49,31 @@ const year = document.querySelector("#year").innerHTML
 
        console.log('YY', YY, 'ÇC', CC, MM, DD)
   
-        return ( (( parseInt(CC/4) - parseInt(2*CC-1)) + (parseInt(5*YY/4) ) + (parseInt((parseInt(26*(MM+1)))/10)) + DD ) + 1) % 7
+        return ( (( parseInt(CC/4) - parseInt(2*CC-1)) + (parseInt(5*YY/4) ) + (parseInt((parseInt(26*(MM+1)))/10)) + DD )) % 7
    }
 document.getElementById("subm").addEventListener("click",akanNames)
 function akanNames(){
-  let gender = document.querySelector('input[name="gender"]:checked').value
+  let gender = document.querySelector('input[name="gender"]:checked')?.value
   let day = dayOfTheWeek()
   let message = document.getElementById("feedback")
   message.innerHTML = ""
+  console.log(gender)
+  if(day == ""){
+    validateDay()
+  }
+  if(gender == null){
+    const errMsg = document.getElementById('errG')
+
+   errMsg.innerHTML = "";
+  try {
+    if(gender == null) throw "choose gender";
+  }
+  catch(err) {
+    errMsg.innerHTML = "Please " + err;
+  }
+  return
+  }
+ 
   if(gender == 'Female'){
     if(day == 0){
       message.innerHTML = "Your Akan name is Akosua"
@@ -78,8 +95,8 @@ function akanNames(){
     }
     else if(day == 6){
       message.innerHTML = "Your Akan name is Ama"
-    }
-  else (gender == 'Male'){
+    }}
+  else {
     if(day == 0){
       message.innerHTML = "Your Akan name is Kwasi"
     } 
@@ -103,5 +120,17 @@ function akanNames(){
     }
   } 
   console.log(gender, day)
+
 }
+function validateGender() {
+  const gender = document.querySelector('input[name="gender"]:checked').value
+  const errMsg = document.getElementById('errG')
+
+   errMsg.innerHTML = "";
+  try {
+    if(gender == "") throw "choose gender";
+  }
+  catch(err) {
+    errMsg.innerHTML = "Please " + err;
+  }
 }
