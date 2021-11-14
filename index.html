@@ -30,13 +30,14 @@
           <div class="appl">
             <h2>Would you like to know your Akan name?</h2>
             <p> Try out below </p>
-            <p>Date of Birth :<br> <input id= "day" class="inp" placeholder="DD"><input  id="month"  class="inp" placeholder="MM"><input class="inp1"placeholder="YYYY"> </p>
+            <p>Date of Birth :<br> <input type= "number"id= "day" class="inp" placeholder="DD"><input type= "number" id="month"  class="inp" placeholder="MM"><input type= "number" id="year" class="inp1"placeholder="YYYY"> </p>
+            <span id="errD"></span><br><span id="errM"></span>
             <p>Gender  : <br> 
               <input type="radio" name="gender" value="Male">
               <label for="Male">Male</label><br>
               <input type="radio"name="gender" value="Female">
               <label for="Female">Female</label><br>
-            <button type="submit">Submit</button>
+            <button type="submit" onclick="">Submit</button>
             <div>
               
             </div>         
@@ -55,5 +56,7 @@
         <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
     </div>
+    <script src="./index.js">
+    </script>
   </body>
 </html>
