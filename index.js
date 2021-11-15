@@ -49,7 +49,7 @@ const year = document.querySelector("#year").value
 
        console.log('YY', YY, 'ÇC', CC, MM, DD)
   
-        return ( (( parseInt(CC/4) - parseInt(2*CC-1)) + (parseInt(5*YY/4) ) + (parseInt((parseInt(26*(MM+1)))/10)) + DD )) % 7
+        return ( (( parseInt(CC/4) - parseInt(2*CC-1)) + (parseInt(5*YY/4) ) + (parseInt((parseInt(26*(MM+1)))/10)) + DD )+1) % 7
    }
 document.getElementById("subm").addEventListener("click",akanNames)
 function akanNames(){
