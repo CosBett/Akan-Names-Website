@@ -4,10 +4,24 @@ body {
 
 }
 h1{ font-family: 'Montagu Slab', serif;
-
-    
-
+    color: 491D7F;
+    color:#990d42 ;
+ 
 }
+#motto{
+    font-family: 'Niconne', cursive;
+    font-size: 35px;
+    color: #ad1aca;
+    font-weight: bolder;
+}
+span{
+    font-size: medium;
+    color: red;
+    width: 80px;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+}
+   
 h2{
     font-family: 'Niconne', cursive;
 

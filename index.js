@@ -2,55 +2,55 @@ const day = document.querySelector("#day").value
 const month = document.querySelector("#month").value
 const year = document.querySelector("#year").value
 
-  function validateDay() {
-    const message = document.getElementById("errD");
-     console.log(message)
-     message.innerHTML = "";
-    let day = document.getElementById("day").value;
-    try {
-      if(day== "") throw "empty";
-      day = Number(day);
-      if(day <= 0) throw "Invalid";
-      if(day > 31 ) throw "Invalid";
-    }
-    catch(err) {
-      message.innerHTML = "Day is " + err;
-    }
+function validateDay() {
+  const message = document.getElementById("errD");
+        console.log(message)
+        message.innerHTML = "";
+  let day = document.getElementById("day").value;
+  try {
+    if(day== "") throw "empty !";
+    day = Number(day);
+    if(day <= 0) throw "Invalid !";
+    if(day > 31 ) throw "Invalid !";
   }
-  document.getElementById("day").addEventListener("change", validateDay)
+  catch(err) {
+     message.innerHTML = "Day is " + err;
+  }
+}
+document.getElementById("day").addEventListener("change", validateDay)
 
-  function validateMonth() {
-    const message = document.getElementById("errM");
-     console.log(message)
-     message.innerHTML = "";
-    let month = document.getElementById("month").value;
-    try {
-      if(month== "") throw "empty";
+function validateMonth() {
+  const message = document.getElementById("errM");
+      console.log(message)
+      message.innerHTML = "";
+  let month = document.getElementById("month").value;
+  try {
+    if(month== "") throw "empty !";
       month = Number(month);
-      if(month <= 0) throw "Invalid";
-      if(month > 12 ) throw "Invalid";
-    }
-    catch(err) {
-      message.innerHTML = "Month is " + err;
-    }
+    if(month <= 0) throw "Invalid !";
+    if(month > 12 ) throw "Invalid !";
   }
-  document.getElementById("month").addEventListener("change", validateMonth)
+  catch(err) {
+     message.innerHTML = "Month is " + err;
+  }
+}
+document.getElementById("month").addEventListener("change", validateMonth)
 
-   function dayOfTheWeek(){
-       let year = document.getElementById("year").value
-       let yr = String(year).split("")
-            .map((year)=>{
-                return Number(year)
-            })
-       let CC = yr.slice(0,2).join("")
-       let YY = yr.slice(2).join("")
-       let MM= document.getElementById("month").value
-       let DD = document.getElementById("day").value
+function dayOfTheWeek(){
+  let year = document.getElementById("year").value
+  let yr = String(year).split("")
+      .map((year)=>{
+          return Number(year)
+      })
+  let CC = yr.slice(0,2).join("")
+  let YY = yr.slice(2).join("")
+  let MM= document.getElementById("month").value
+  let DD = document.getElementById("day").value
 
-       console.log('YY', YY, 'ÇC', CC, MM, DD)
-  
-        return ( (( parseInt(CC/4) - parseInt(2*CC-1)) + (parseInt(5*YY/4) ) + (parseInt((parseInt(26*(MM+1)))/10)) + DD )+1) % 7
-   }
+  console.log('YY', YY, 'ÇC', CC, MM, DD)
+
+  return ( (( parseInt(CC/4) - parseInt(2*CC-1)) + (parseInt(5*YY/4) ) + (parseInt((parseInt(26*(MM+1)))/10)) + DD +1) % 7)
+}
 document.getElementById("subm").addEventListener("click",akanNames)
 function akanNames(){
   let gender = document.querySelector('input[name="gender"]:checked')?.value
@@ -66,7 +66,7 @@ function akanNames(){
 
    errMsg.innerHTML = "";
   try {
-    if(gender == null) throw "choose gender";
+    if(gender == null) throw "choose gender !";
   }
   catch(err) {
     errMsg.innerHTML = "Please " + err;
