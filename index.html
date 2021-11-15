@@ -27,24 +27,26 @@
           <img id= boyimg src="images/boy.jpg" alt="Boy image">
         </div>  
         <div class="col-md-5 ">
-          <div class="appl">
-            <h2 id="aname">Would you like to know your Akan name?</h2>
-            <p> Try out below </p>
-            <p>Date of Birth :<br> <input type= "number"id= "day" class="inp" placeholder="DD"><input type= "number" id="month"  class="inp" placeholder="MM"><input type= "number" id="year" class="inp1"placeholder="YYYY"> </p>
-            <span id="errD"></span><br><span id="errM"></span>
-            <p>Gender  : <br> 
-              <input type="radio" name="gender" value="Male" >
-              <label for="Male">Male</label><br>
-              <input type="radio"name="gender" value="Female">
-              <label for="Female">Female</label><br>
-            <span id="errG"></span><br>
-            <button id= "subm" type="submit" onclick="">Submit</button>
-            <div class="feedb">
-              <p class="none">Your Akan Name is</p>
-              <p class="none" id="feedback"></p>
-              
-            </div>         
-          </div>
+          <form>
+            <div class="appl">
+              <h2 id="aname">Would you like to know your Akan name?</h2>
+              <p> Try out below </p>
+              <p>Date of Birth :<br> <input type= "number"id= "day" class="inp" placeholder="DD"><input type= "number" id="month"  class="inp" placeholder="MM"><input type= "number" id="year" class="inp1"placeholder="YYYY"> </p>
+              <span id="errD"></span><br><span id="errM"></span>
+              <p>Gender  : <br> 
+                <input type="radio" name="gender" value="Male" >
+                <label for="Male">Male</label><br>
+                <input type="radio"name="gender" value="Female">
+                <label for="Female">Female</label><br>
+              <span id="errG"></span><br>
+              <button id= "subm" type="submit" onclick="">Submit</button>
+              <button id="clearform"type="reset"> Retry</button>
+              <div class="feedb">
+                <p id="nameintro"class="none">Your Akan Name is</p>
+                <p class="none" id="feedback"></p>
+              </div>           
+            </div>
+          </form> 
         </div>
         <div class="col-md-3">
             <img src="images/girl.jpg" alt="Girl image">

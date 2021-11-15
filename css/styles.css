@@ -60,9 +60,9 @@ input::-webkit-inner-spin-button {
     width: 80px;
 }
 .webname{
- margin-top: 40px;
- margin-bottom: 0;
- justify-content: baseline;
+    margin-top: 40px;
+    margin-bottom: 0;
+    justify-content: baseline;
 }
 .feedb{
     height: 120px;
@@ -75,6 +75,16 @@ input::-webkit-inner-spin-button {
     text-align: center;
     padding: 10px;
     border-radius: 80px;
+}
+#feedback{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Abril Fatface', cursive;
+}
+#nameintro{
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Abril Fatface', cursive;
 }
 #aname{
     color:#111D5E;

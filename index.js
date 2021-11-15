@@ -1,6 +1,6 @@
-const day = document.querySelector("#day").value
-const month = document.querySelector("#month").value
-const year = document.querySelector("#year").value
+let day = document.querySelector("#day").value
+let month = document.querySelector("#month").value
+let year = document.querySelector("#year").value
 
 function validateDay() {
   const message = document.getElementById("errD");
@@ -72,63 +72,63 @@ function akanNames(){
  
   if(gender == 'Female'){
     if(day == 'Sunday'){
-      message.innerHTML = "Your Akan name is Akosua"
+      message.innerHTML = "Akosua"
     } 
     else if(day == 'Monday'){
-      message.innerHTML = "Your Akan name is Adwoa"
+      message.innerHTML = "Adwoa"
     }
     else if(day == 'Tuesday'){
-      message.innerHTML = "Your Akan name is Abenaa"
+      message.innerHTML = "Abenaa"
     }
     else if(day == 'Wednesday'){
-      message.innerHTML = "Your Akan name is Akua"
+      message.innerHTML = "Akua"
     }
     else if(day == 'Thursday'){
-      message.innerHTML = "Your Akan name is Yaa"
+      message.innerHTML = "Yaa"
     }
     else if(day == 'Friday'){
-      message.innerHTML = "Your Akan name is Afua"
+      message.innerHTML = "Afua"
     }
     else if(day == 'Saturday'){
-      message.innerHTML = "Your Akan name is Ama"
+      message.innerHTML = "Ama"
     }}
   else {
     if(day == 'Sunday'){
-      message.innerHTML = "Your Akan name is Kwasi"
+      message.innerHTML = "Kwasi"
     } 
     else if(day == 'Monday'){
-      message.innerHTML = "Your Akan name is Kwadwo"
+      message.innerHTML = " Kwadwo"
     }
     else if(day == 'Tuesday'){
-      message.innerHTML = "Your Akan name is Kwabena"
+      message.innerHTML = "Kwabena"
     }
     else if(day == 'Wednesday'){
-      message.innerHTML = "Your Akan name is Kwaku"
+      message.innerHTML = "Kwaku"
     }
     else if(day == 'Thursday'){
-      message.innerHTML = "Your Akan name is Yaw"
+      message.innerHTML = "Yaw"
     }
     else if(day == 'Friday'){
-      message.innerHTML = "Your Akan name is Kofi"
+      message.innerHTML = "Kofi"
     }
     else if(day == 'Saturday'){
-      message.innerHTML = "Your Akan name is Kwame"
+      message.innerHTML = "Kwame"
     }
   } 
   console.log(document.querySelectorAll('.none'))
-  document.querySelectorAll('.none').style.display='block'
-  
+  const ps = document.querySelectorAll('.none')
 
+  for (var x = 0; x < ps.length; x++){
+    ps[x].style.display = 'block'
 }
-function validateGender() {
-  const gender = document.querySelector('input[name="gender"]:checked').value
-  const errMsg = document.getElementById('errG')
-
-   errMsg.innerHTML = "";
-  try {
-    if(gender == "") throw "choose gender";
-  }
-  catch(err) {
-    errMsg.innerHTML = "Please " + err;
-  }
 }
+function clearForm(e){
+  e.preventDefault()
+   day = ''
+   month = ''
+   year = ''
+   let gender = document.querySelector('input[name="gender"]:checked')
+   gender.value = null
+   document.querySelector('form').reset()
+}
+document.getElementById('clearform').addEventListener('click',clearForm)
