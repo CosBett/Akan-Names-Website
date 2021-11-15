@@ -3,6 +3,7 @@
 Latest version - 15th Nov 2021
 #### By **Cosmas Bett**
 ## Description
+![Gif illustration](images/readme.gif)
 This web application generates an Akan name for you derived from Ghanian culture, which corresponds to the day in the week you were born.This a traditional naming system for people from Ghana, according to the tradition, each child is born with a name associated to their soul. The day the child is born is therefore determined by the soul. 
             The naming system was initiated by the ancestors and has attracted so many people’s attention as they desire to know more about these names.
             Akan names are not just names given to children to give them identity, it  also have different meanings and appellations, Link included for user who want to find out Akan names meanings and appellations.
