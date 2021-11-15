@@ -4,8 +4,8 @@ body {
 
 }
 h1{ font-family: 'Montagu Slab', serif;
-    color: 491D7F;
-    color:#990d42 ;
+    color:#111D5E;
+    font-weight: 800;
  
 }
 #motto{
@@ -22,7 +22,7 @@ span{
     font-size: 18px;
 }
    
-h2{
+h2{text-align: center;
     font-family: 'Niconne', cursive;
 
 }
@@ -37,15 +37,15 @@ p{
 }
 .flag{
     height: 100px;
-    margin-top: 0;
+    margin-left: 50px;
 }
 .appl{
     background-color: transparent 50%;
     width: 100%;
-    border: 5px solid rgba(78, 17, 219, 0.336);
-    padding-left: 60px;
-    padding-top: 20px;
-    margin: 10px;
+    padding: 20px;
+    margin-top:10px;
+    background-color: rgba(135, 207, 235, 0.521);
+    border-radius: 20px;
 
 }
 .inp{
@@ -63,4 +63,21 @@ input::-webkit-inner-spin-button {
  margin-top: 40px;
  margin-bottom: 0;
  justify-content: baseline;
+}
+#feedback{
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.308);
+    font-family: 'Abril Fatface', cursive;
+    color: rgb(6, 8, 1);
+    font-size: 36px;
+    font-weight: 700;
+    border:solid rgba(224, 55, 236, 0.336);
+    text-align: center;
+    padding: 10px;
+    border-radius: 80px;
+}
+#aname{
+    color:#111D5E;
+    font-size:38px;
+    font-weight: bolder;
 }
