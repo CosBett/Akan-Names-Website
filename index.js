@@ -54,15 +54,16 @@ function akanNames(){
   let message = document.getElementById("feedback")
   message.innerHTML = ""
   console.log(gender)
-  if(day == ""){
-    validateDay()
+  if (document.querySelector("#day").value == "") {
+    validateDay();
   }
   if(gender == null){
     const errMsg = document.getElementById('errG')
 
    errMsg.innerHTML = "";
   try {
-    if(gender == null) throw "choose gender !";
+    if(gender == null) throw "choose gender!";
+    
   }
   catch(err) {
     errMsg.innerHTML = "Please " + err;
@@ -120,15 +121,21 @@ function akanNames(){
 
   for (var x = 0; x < ps.length; x++){
     ps[x].style.display = 'block'
+  }
 }
-}
-function clearForm(e){
-  e.preventDefault()
-   day = ''
-   month = ''
-   year = ''
-   let gender = document.querySelector('input[name="gender"]:checked')
-   gender.value = null
-   document.querySelector('form').reset()
+function clearForm(){
+    document.querySelector("#day").value = "";
+    document.querySelector("#month").value = "";
+    document.querySelector("#year").value = "";
+    document.querySelectorAll('input[name="gender"]').checked = false;
+
+  const ps = document.querySelectorAll(".none");
+
+  for (var x = 0; x < ps.length; x++) {
+    ps[x].style.display = "none";
+  const radios = document.getElementsByName("gender");
+  for (var i = 0; i < radios.length; i++) radios[i].checked = false;
+  }
 }
 document.getElementById('clearform').addEventListener('click',clearForm)
+

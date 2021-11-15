@@ -77,13 +77,14 @@ input::-webkit-inner-spin-button {
     border-radius: 80px;
 }
 #feedback{
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 50px;
+    font-weight: 800;
     font-family: 'Abril Fatface', cursive;
+   
 }
 #nameintro{
-    font-size: 15px;
-    font-weight: 300;
+    font-size: 20px;
+    font-weight: 450;
     font-family: 'Abril Fatface', cursive;
 }
 #aname{
@@ -93,4 +94,13 @@ input::-webkit-inner-spin-button {
 }
 .none{
     display: none;
+}
+.icons{
+    font-size: xx-large;
+    text-align: center;
+}
+.ifooter{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Petemoss', cursive;
 }
