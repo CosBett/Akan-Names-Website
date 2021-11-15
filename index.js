@@ -36,6 +36,23 @@ function validateMonth() {
 }
 document.getElementById("month").addEventListener("change", validateMonth)
 
+function validateYear() {
+  const message = document.getElementById("errY");
+        console.log(message)
+        message.innerHTML = "";
+  let year = document.getElementById("year").value;
+  try {
+    if(year== "") throw "empty!";
+    year = Number(year);
+    if(year <= 1900) throw "Invalid!";
+    if(year > 2100 ) throw "Invalid!";
+  }
+  catch(err) {
+     message.innerHTML = "Year is " + err;
+  }
+}
+document.getElementById("year").addEventListener("change", validateYear)
+
 function dayOfTheWeek(){
   let year = document.getElementById("year").value
   let MM= document.getElementById("month").value
@@ -57,9 +74,15 @@ function akanNames(){
   if (document.querySelector("#day").value == "") {
     validateDay();
   }
+  if (document.querySelector("#month").value == "") {
+    validateMonth()
+  }
+  if (document.querySelector("#year").value == "") {
+    validateYear()
+  }
   if(gender == null){
     const errMsg = document.getElementById('errG')
-
+  
    errMsg.innerHTML = "";
   try {
     if(gender == null) throw "choose gender!";
@@ -70,7 +93,10 @@ function akanNames(){
   }
   return
   }
- 
+  else {
+    const errMsg = document.getElementById('errG')
+    errMsg.innerHTML = "";
+  }
   if(gender == 'Female'){
     if(day == 'Sunday'){
       message.innerHTML = "Akosua"
@@ -92,7 +118,8 @@ function akanNames(){
     }
     else if(day == 'Saturday'){
       message.innerHTML = "Ama"
-    }}
+    }
+  }
   else {
     if(day == 'Sunday'){
       message.innerHTML = "Kwasi"
