@@ -8,10 +8,10 @@ function validateDay() {
         message.innerHTML = "";
   let day = document.getElementById("day").value;
   try {
-    if(day== "") throw "empty !";
+    if(day== "") throw "empty!";
     day = Number(day);
-    if(day <= 0) throw "Invalid !";
-    if(day > 31 ) throw "Invalid !";
+    if(day <= 0) throw "Invalid!";
+    if(day > 31 ) throw "Invalid!";
   }
   catch(err) {
      message.innerHTML = "Day is " + err;
@@ -25,10 +25,10 @@ function validateMonth() {
       message.innerHTML = "";
   let month = document.getElementById("month").value;
   try {
-    if(month== "") throw "empty !";
+    if(month== "") throw "empty!";
       month = Number(month);
-    if(month <= 0) throw "Invalid !";
-    if(month > 12 ) throw "Invalid !";
+    if(month <= 0) throw "Invalid!";
+    if(month > 12 ) throw "Invalid!";
   }
   catch(err) {
      message.innerHTML = "Month is " + err;
@@ -38,19 +38,15 @@ document.getElementById("month").addEventListener("change", validateMonth)
 
 function dayOfTheWeek(){
   let year = document.getElementById("year").value
-  let yr = String(year).split("")
-      .map((year)=>{
-          return Number(year)
-      })
-  let CC = yr.slice(0,2).join("")
-  let YY = yr.slice(2).join("")
   let MM= document.getElementById("month").value
   let DD = document.getElementById("day").value
 
-  console.log('YY', YY, 'ÇC', CC, MM, DD)
+    const dayOfWeek = new Date([year, MM, DD].join("-")).getDay();    
+    console.log(dayOfWeek)
+    return isNaN(dayOfWeek) ? null : 
+      ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][dayOfWeek];
+  }
 
-  return ( (( parseInt(CC/4) - parseInt(2*CC-1)) + (parseInt(5*YY/4) ) + (parseInt((parseInt(26*(MM+1)))/10)) + DD +1) % 7)
-}
 document.getElementById("subm").addEventListener("click",akanNames)
 function akanNames(){
   let gender = document.querySelector('input[name="gender"]:checked')?.value
@@ -75,51 +71,53 @@ function akanNames(){
   }
  
   if(gender == 'Female'){
-    if(day == 0){
+    if(day == 'Sunday'){
       message.innerHTML = "Your Akan name is Akosua"
     } 
-    else if(day == 1){
+    else if(day == 'Monday'){
       message.innerHTML = "Your Akan name is Adwoa"
     }
-    else if(day == 2){
+    else if(day == 'Tuesday'){
       message.innerHTML = "Your Akan name is Abenaa"
     }
-    else if(day == 3){
+    else if(day == 'Wednesday'){
       message.innerHTML = "Your Akan name is Akua"
     }
-    else if(day == 4){
+    else if(day == 'Thursday'){
       message.innerHTML = "Your Akan name is Yaa"
     }
-    else if(day == 5){
+    else if(day == 'Friday'){
       message.innerHTML = "Your Akan name is Afua"
     }
-    else if(day == 6){
+    else if(day == 'Saturday'){
       message.innerHTML = "Your Akan name is Ama"
     }}
   else {
-    if(day == 0){
+    if(day == 'Sunday'){
       message.innerHTML = "Your Akan name is Kwasi"
     } 
-    else if(day == 1){
+    else if(day == 'Monday'){
       message.innerHTML = "Your Akan name is Kwadwo"
     }
-    else if(day == 2){
+    else if(day == 'Tuesday'){
       message.innerHTML = "Your Akan name is Kwabena"
     }
-    else if(day == 3){
+    else if(day == 'Wednesday'){
       message.innerHTML = "Your Akan name is Kwaku"
     }
-    else if(day == 4){
+    else if(day == 'Thursday'){
       message.innerHTML = "Your Akan name is Yaw"
     }
-    else if(day == 5){
+    else if(day == 'Friday'){
       message.innerHTML = "Your Akan name is Kofi"
     }
-    else if(day == 6){
+    else if(day == 'Saturday'){
       message.innerHTML = "Your Akan name is Kwame"
     }
   } 
-  console.log(gender, day)
+  console.log(document.querySelectorAll('.none'))
+  document.querySelectorAll('.none').style.display='block'
+  
 
 }
 function validateGender() {

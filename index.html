@@ -9,7 +9,7 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=DM+Serif+Display&family=Niconne&family=Passion+One&family=Patrick+Hand&family=Righteous&family=Ultra&display=swap" rel="stylesheet">
       <link href="./css/styles.css" rel="stylesheet">
-
+      <script src="https://kit.fontawesome.com/d193cae1c2.js" crossorigin="anonymous"></script>
   </head>
   <body> 
     <div class="container" >
@@ -39,7 +39,9 @@
               <label for="Female">Female</label><br>
             <span id="errG"></span><br>
             <button id= "subm" type="submit" onclick="">Submit</button>
-            <div id="feedback">
+            <div class="feedb">
+              <p class="none">Your Akan Name is</p>
+              <p class="none" id="feedback"></p>
               
             </div>         
           </div>
@@ -53,10 +55,17 @@
       </div>
       <hr>
       <div class="row">
-        <h2>Do you want to improve this page?</h2>
-        <p>Edit the source code on Github</p>
-        <p>Contribute on Github</p>
-        <p>Report any issue here</p>
+        <div>
+          <h2>Do you want to improve this page?</h2>
+          <p>Edit the source code on Github</p>
+          <p>Contribute on Github</p>
+          <p>Report any issue here</p>
+        </div>
+        <div class="icons">
+          <a href="https://github.com/CosBett" target="_blank"><i class="fab fa-github-square"></i></a>
+          <a href="https://www.facebook.com/Cosmas.bett.mandellah" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.linkedin.com/in/CosmasbettM" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
       </div>
     </div>
     <script src="./index.js">
