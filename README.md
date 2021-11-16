@@ -5,6 +5,7 @@ Latest version - 15th Nov 2021
 ## Description
 ![Gif illustration](images/readme.gif)
 
+![Landing page screenshot](images/screenshotakan.jpg)
 
 This web application generates an Akan name for you derived from Ghanian culture, which corresponds to the day in the week you were born.This a traditional naming system for people from Ghana, according to the tradition, each child is born with a name associated to their soul. The day the child is born is therefore determined by the soul. 
 The naming system was initiated by the ancestors and has attracted so many people’s attention as they desire to know more about these names.
@@ -28,7 +29,8 @@ I have used JavaScript to execute the function of the application,that is conver
 ## Support and contact details
 Incase of any issues or clarification, development, ideas, concerns or contributions to the code.  Kindly reach out through my email cosmasbett9@gmail.com.
 ### License
-*{Copyright <2021> <Cosmas Bett>
+*{Copyright 2021 Cosmas Bett
+
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
